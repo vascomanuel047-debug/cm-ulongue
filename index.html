@@ -1,584 +1,765 @@
+# Site Profissional — Moyo Technologies
+
+```html
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moyo Tecnologies</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moyo Technologies | Soluções Tecnológicas Inteligentes</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-      scroll-behavior: smooth;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    body {
-      background: #07111f;
-      color: white;
-      overflow-x: hidden;
-    }
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins', sans-serif;
+            scroll-behavior:smooth;
+        }
 
-    header {
-      width: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-      background: rgba(0,0,0,0.6);
-      backdrop-filter: blur(10px);
-      padding: 18px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+        body{
+            background:#07111f;
+            color:white;
+            overflow-x:hidden;
+        }
 
-    .logo {
-      font-size: 30px;
-      font-weight: 800;
-      color: #00c3ff;
-    }
+        ::-webkit-scrollbar{
+            width:10px;
+        }
 
-    nav a {
-      text-decoration: none;
-      color: white;
-      margin-left: 25px;
-      transition: 0.3s;
-      font-weight: 500;
-    }
+        ::-webkit-scrollbar-thumb{
+            background:#00c3ff;
+            border-radius:20px;
+        }
 
-    nav a:hover {
-      color: #00c3ff;
-    }
+        header{
+            width:100%;
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:1000;
+            background:rgba(0,0,0,0.7);
+            backdrop-filter:blur(10px);
+            padding:18px 8%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            border-bottom:1px solid rgba(255,255,255,0.1);
+        }
 
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 140px 10%;
-      background:
-        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-        url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1920&auto=format&fit=crop') center/cover;
-    }
+        .logo{
+            font-size:30px;
+            font-weight:800;
+            color:#00c3ff;
+        }
 
-    .hero-content h1 {
-      font-size: 70px;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
+        .logo span{
+            color:white;
+        }
 
-    .hero-content h1 span {
-      color: #00c3ff;
-    }
+        nav a{
+            text-decoration:none;
+            color:white;
+            margin-left:30px;
+            font-size:16px;
+            transition:0.4s;
+            font-weight:500;
+        }
 
-    .hero-content p {
-      max-width: 850px;
-      margin: auto;
-      font-size: 20px;
-      line-height: 1.8;
-      color: #d8d8d8;
-    }
+        nav a:hover{
+            color:#00c3ff;
+        }
 
-    .buttons {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+        .hero{
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:140px 8% 100px;
+            background:
+            linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+            url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop');
+            background-size:cover;
+            background-position:center;
+        }
 
-    .btn {
-      padding: 16px 38px;
-      border-radius: 40px;
-      border: none;
-      font-size: 17px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: 0.4s;
-      text-decoration: none;
-    }
+        .hero-text{
+            max-width:650px;
+        }
 
-    .btn-primary {
-      background: #00c3ff;
-      color: black;
-      box-shadow: 0 0 20px #00c3ff;
-    }
+        .hero-text h1{
+            font-size:68px;
+            line-height:1.1;
+            margin-bottom:20px;
+        }
 
-    .btn-primary:hover {
-      transform: translateY(-5px);
-      background: white;
-    }
+        .hero-text h1 span{
+            color:#00c3ff;
+        }
 
-    .btn-secondary {
-      border: 2px solid #00c3ff;
-      color: white;
-      background: transparent;
-    }
+        .hero-text p{
+            font-size:18px;
+            line-height:1.8;
+            color:#d6d6d6;
+            margin-bottom:35px;
+        }
 
-    .btn-secondary:hover {
-      background: #00c3ff;
-      color: black;
-    }
+        .buttons{
+            display:flex;
+            gap:20px;
+            flex-wrap:wrap;
+        }
 
-    section {
-      padding: 100px 8%;
-    }
+        .btn{
+            padding:15px 35px;
+            border-radius:50px;
+            text-decoration:none;
+            font-weight:600;
+            transition:0.4s;
+            display:inline-block;
+        }
 
-    .title {
-      text-align: center;
-      margin-bottom: 70px;
-    }
+        .btn-primary{
+            background:#00c3ff;
+            color:#07111f;
+            box-shadow:0 0 25px rgba(0,195,255,0.5);
+        }
 
-    .title h2 {
-      font-size: 48px;
-      color: #00c3ff;
-      margin-bottom: 15px;
-    }
+        .btn-primary:hover{
+            transform:translateY(-5px);
+            background:white;
+        }
 
-    .title p {
-      color: #cfcfcf;
-      max-width: 800px;
-      margin: auto;
-      line-height: 1.8;
-    }
+        .btn-secondary{
+            border:2px solid #00c3ff;
+            color:white;
+        }
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
+        .btn-secondary:hover{
+            background:#00c3ff;
+            color:#07111f;
+        }
 
-    .service-box {
-      background: #101d30;
-      border-radius: 25px;
-      padding: 40px 30px;
-      transition: 0.4s;
-      border: 1px solid rgba(255,255,255,0.08);
-      position: relative;
-      overflow: hidden;
-    }
+        .hero-card{
+            width:380px;
+            background:rgba(255,255,255,0.06);
+            border:1px solid rgba(255,255,255,0.1);
+            padding:35px;
+            border-radius:30px;
+            backdrop-filter:blur(10px);
+            box-shadow:0 0 30px rgba(0,0,0,0.4);
+        }
 
-    .service-box::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 5px;
-      top: 0;
-      left: 0;
-      background: linear-gradient(90deg, #00c3ff, #0066ff);
-    }
+        .hero-card h3{
+            font-size:28px;
+            margin-bottom:20px;
+            color:#00c3ff;
+        }
 
-    .service-box:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 25px rgba(0,195,255,0.3);
-    }
+        .hero-card p{
+            line-height:1.8;
+            color:#ddd;
+        }
 
-    .service-box h3 {
-      margin-bottom: 15px;
-      font-size: 26px;
-      color: #00c3ff;
-    }
+        section{
+            padding:100px 8%;
+        }
 
-    .service-box p {
-      color: #d7d7d7;
-      line-height: 1.8;
-      font-size: 15px;
-    }
+        .section-title{
+            text-align:center;
+            margin-bottom:60px;
+        }
 
-    .about {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-      gap: 60px;
-      align-items: center;
-    }
+        .section-title h2{
+            font-size:48px;
+            margin-bottom:15px;
+        }
 
-    .about img {
-      width: 100%;
-      border-radius: 30px;
-      box-shadow: 0 0 40px rgba(0,195,255,0.3);
-    }
+        .section-title h2 span{
+            color:#00c3ff;
+        }
 
-    .about-text h2 {
-      font-size: 50px;
-      margin-bottom: 20px;
-    }
+        .section-title p{
+            color:#bdbdbd;
+            max-width:700px;
+            margin:auto;
+            line-height:1.8;
+        }
 
-    .about-text h2 span {
-      color: #00c3ff;
-    }
+        .services{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:30px;
+        }
 
-    .about-text p {
-      line-height: 1.9;
-      color: #d5d5d5;
-      margin-bottom: 20px;
-    }
+        .service-box{
+            background:#0d1b2e;
+            border-radius:25px;
+            padding:35px;
+            transition:0.5s;
+            border:1px solid rgba(255,255,255,0.06);
+            position:relative;
+            overflow:hidden;
+        }
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-      gap: 30px;
-      margin-top: 50px;
-    }
+        .service-box::before{
+            content:'';
+            position:absolute;
+            width:150px;
+            height:150px;
+            background:#00c3ff;
+            border-radius:50%;
+            top:-70px;
+            right:-70px;
+            opacity:0.15;
+        }
 
-    .stat-box {
-      background: #101d30;
-      text-align: center;
-      padding: 40px 20px;
-      border-radius: 25px;
-      transition: 0.4s;
-    }
+        .service-box:hover{
+            transform:translateY(-12px);
+            box-shadow:0 0 30px rgba(0,195,255,0.2);
+        }
 
-    .stat-box:hover {
-      transform: scale(1.05);
-    }
+        .service-box h3{
+            font-size:25px;
+            margin:20px 0;
+        }
 
-    .stat-box h3 {
-      font-size: 50px;
-      color: #00c3ff;
-      margin-bottom: 10px;
-    }
+        .service-box p{
+            color:#d0d0d0;
+            line-height:1.8;
+        }
 
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-      gap: 30px;
-    }
+        .icon{
+            font-size:50px;
+        }
 
-    .project {
-      position: relative;
-      overflow: hidden;
-      border-radius: 25px;
-    }
+        .about{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+            gap:60px;
+            align-items:center;
+        }
 
-    .project img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: 0.5s;
-    }
+        .about img{
+            width:100%;
+            border-radius:30px;
+            box-shadow:0 0 40px rgba(0,0,0,0.5);
+        }
 
-    .project:hover img {
-      transform: scale(1.1);
-    }
+        .about-text h2{
+            font-size:50px;
+            margin-bottom:20px;
+        }
 
-    .project-info {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      padding: 30px;
-      background: linear-gradient(transparent, rgba(0,0,0,0.95));
-    }
+        .about-text h2 span{
+            color:#00c3ff;
+        }
 
-    .project-info h3 {
-      color: #00c3ff;
-      margin-bottom: 10px;
-    }
+        .about-text p{
+            line-height:1.9;
+            color:#d0d0d0;
+            margin-bottom:20px;
+        }
 
-    .contact {
-      background: linear-gradient(135deg, #081726, #0f2238);
-      border-radius: 35px;
-      padding: 60px;
-      text-align: center;
-    }
+        .stats{
+            margin-top:40px;
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+            gap:20px;
+        }
 
-    .contact h2 {
-      font-size: 45px;
-      margin-bottom: 20px;
-      color: #00c3ff;
-    }
+        .stat-box{
+            background:#0d1b2e;
+            padding:25px;
+            border-radius:20px;
+            text-align:center;
+        }
 
-    .contact p {
-      color: #d7d7d7;
-      margin-bottom: 40px;
-      line-height: 1.8;
-    }
+        .stat-box h3{
+            color:#00c3ff;
+            font-size:35px;
+            margin-bottom:10px;
+        }
 
-    form {
-      display: grid;
-      gap: 20px;
-      max-width: 800px;
-      margin: auto;
-    }
+        .projects{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+            gap:30px;
+        }
 
-    input, textarea {
-      width: 100%;
-      padding: 18px;
-      border-radius: 15px;
-      border: none;
-      background: #13263f;
-      color: white;
-      font-size: 16px;
-    }
+        .project-card{
+            border-radius:25px;
+            overflow:hidden;
+            position:relative;
+            height:350px;
+        }
 
-    textarea {
-      resize: none;
-      height: 180px;
-    }
+        .project-card img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            transition:0.5s;
+        }
 
-    footer {
-      padding: 35px;
-      text-align: center;
-      background: #040b14;
-      color: #bdbdbd;
-      margin-top: 80px;
-    }
+        .project-card:hover img{
+            transform:scale(1.1);
+        }
 
-    .socials {
-      margin-top: 20px;
-    }
+        .project-overlay{
+            position:absolute;
+            inset:0;
+            background:linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            display:flex;
+            flex-direction:column;
+            justify-content:flex-end;
+            padding:30px;
+        }
 
-    .socials a {
-      display: inline-block;
-      width: 50px;
-      height: 50px;
-      line-height: 50px;
-      text-align: center;
-      border-radius: 50%;
-      background: #0f2238;
-      margin: 0 10px;
-      color: white;
-      text-decoration: none;
-      transition: 0.4s;
-      font-size: 20px;
-    }
+        .project-overlay h3{
+            font-size:28px;
+            margin-bottom:10px;
+        }
 
-    .socials a:hover {
-      background: #00c3ff;
-      color: black;
-      transform: translateY(-5px);
-    }
+        .project-overlay p{
+            color:#ddd;
+            line-height:1.7;
+        }
 
-    @media(max-width: 900px) {
-      .hero-content h1 {
-        font-size: 45px;
-      }
+        .why{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:30px;
+        }
 
-      nav {
-        display: none;
-      }
+        .why-box{
+            background:#0d1b2e;
+            padding:35px;
+            border-radius:25px;
+            text-align:center;
+            transition:0.4s;
+        }
 
-      .contact {
-        padding: 40px 20px;
-      }
-    }
-  </style>
+        .why-box:hover{
+            background:#00c3ff;
+            color:#07111f;
+            transform:translateY(-10px);
+        }
+
+        .why-box p{
+            margin-top:15px;
+            line-height:1.8;
+        }
+
+        .contact{
+            background:linear-gradient(135deg,#0d1b2e,#07111f);
+            border-radius:30px;
+            padding:60px;
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:40px;
+        }
+
+        .contact-info h2{
+            font-size:45px;
+            margin-bottom:20px;
+        }
+
+        .contact-info h2 span{
+            color:#00c3ff;
+        }
+
+        .contact-info p{
+            line-height:1.9;
+            color:#d0d0d0;
+            margin-bottom:20px;
+        }
+
+        .contact-form form{
+            display:flex;
+            flex-direction:column;
+            gap:20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea{
+            width:100%;
+            padding:18px;
+            border:none;
+            border-radius:15px;
+            background:#13233b;
+            color:white;
+            font-size:16px;
+        }
+
+        .contact-form textarea{
+            height:150px;
+            resize:none;
+        }
+
+        .contact-form button{
+            padding:16px;
+            border:none;
+            background:#00c3ff;
+            color:#07111f;
+            border-radius:15px;
+            font-size:18px;
+            font-weight:700;
+            cursor:pointer;
+            transition:0.4s;
+        }
+
+        .contact-form button:hover{
+            background:white;
+            transform:translateY(-5px);
+        }
+
+        footer{
+            text-align:center;
+            padding:40px 20px;
+            color:#bdbdbd;
+            border-top:1px solid rgba(255,255,255,0.08);
+            margin-top:60px;
+        }
+
+        @media(max-width:1000px){
+            .hero{
+                flex-direction:column;
+                text-align:center;
+                gap:50px;
+            }
+
+            .hero-text h1{
+                font-size:50px;
+            }
+
+            nav{
+                display:none;
+            }
+
+            .buttons{
+                justify-content:center;
+            }
+        }
+
+        @media(max-width:600px){
+            .hero-text h1{
+                font-size:38px;
+            }
+
+            .section-title h2,
+            .about-text h2,
+            .contact-info h2{
+                font-size:35px;
+            }
+
+            .hero-card{
+                width:100%;
+            }
+
+            .contact{
+                padding:35px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <div class="logo"> V&C Inovation </div>
+    <header>
+        <div class="logo">Moyo <span>Technologies</span></div>
 
-    <nav>
-      <a href="#inicio">Início</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
+        <nav>
+            <a href="#home">Início</a>
+            <a href="#services">Serviços</a>
+            <a href="#about">Sobre</a>
+            <a href="#projects">Projetos</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+    </header>
 
-  <section class="hero" id="inicio">
-    <div class="hero-content">
-      <h1>Transformamos Ideias em <span>Tecnologia</span></h1>
+    <section class="hero" id="home">
 
-      <p>
-        Somos uma empresa moderna especializada em desenvolvimento de software,
-        websites profissionais, sistemas empresariais, aplicações móveis,
-        soluções para municípios, marketing digital, inteligência artificial,
-        segurança informática e inovação tecnológica para toda sociedade.
-      </p>
+        <div class="hero-text">
+            <h1>Transformando Empresas Com <span>Tecnologia Inteligente</span></h1>
 
-      <div class="buttons">
-        <a href="#servicos" class="btn btn-primary">Nossos Serviços</a>
-        <a href="#contacto" class="btn btn-secondary">Falar Connosco</a>
-      </div>
-    </div>
-  </section>
+            <p>
+                A Moyo Technologies é uma empresa moderna especializada em soluções tecnológicas completas.
+                Trabalhamos com instalação de redes de computadores, segurança eletrónica,
+                sistemas empresariais, backups profissionais, servidores, websites,
+                monitoramento e suporte técnico para empresas e instituições.
+            </p>
 
-  <section id="servicos">
-    <div class="title">
-      <h2>Nossos Serviços</h2>
-      <p>
-        Oferecemos soluções completas para empresas, instituições,
-        escolas, municípios, negócios locais e toda sociedade.
-      </p>
-    </div>
-
-    <div class="services">
-
-      <div class="service-box">
-        <h3>Desenvolvimento Web</h3>
-        <p>
-          Criação de websites profissionais, modernos, rápidos,
-          responsivos e totalmente personalizados.
-        </p>
-      </div>
-
-      <div class="service-box">
-        <h3>Sistemas Empresariais</h3>
-        <p>
-          Desenvolvimento de sistemas de gestão para empresas,
-          escolas, hospitais, municípios e instituições.
-        </p>
-      </div>
-
-      <div class="service-box">
-        <h3>Aplicações Mobile</h3>
-        <p>
-          Criação de aplicativos Android e iOS com design moderno
-          e funcionalidades avançadas.
-        </p>
-      </div>
-
-      <div class="service-box">
-        <h3>Marketing Digital</h3>
-        <p>
-          Gestão de redes sociais, publicidade online,
-          branding e crescimento digital.
-        </p>
-      </div>
-
-      <div class="service-box">
-        <h3>Inteligência Artificial</h3>
-        <p>
-          Automação de processos, chatbots inteligentes,
-          análise de dados e inovação tecnológica.
-        </p>
-      </div>
-
-      <div class="service-box">
-        <h3>Segurança Informática</h3>
-        <p>
-          Protecção de sistemas, dados, redes e servidores
-          contra ameaças digitais.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="sobre">
-    <div class="about">
-
-      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="empresa">
-
-      <div class="about-text">
-        <h2>Sobre a <span> </span></h2>
-
-        <p>
-          A Moyo Tecnologies é uma empresa tecnológica inovadora criada para
-          revolucionar a forma como empresas e instituições utilizam a tecnologia.
-          Trabalhamos com criatividade, inovação e excelência para oferecer soluções
-          digitais modernas e eficientes.
-        </p>
-
-        <p>
-          Nossa missão é desenvolver tecnologias que simplificam processos,
-          aumentam produtividade e ajudam organizações a crescerem no mundo digital.
-        </p>
-
-        <div class="stats">
-          <div class="stat-box">
-            <h3>200+</h3>
-            <p>Projectos</p>
-          </div>
-
-          <div class="stat-box">
-            <h3>150</h3>
-            <p>Clientes</p>
-          </div>
-
-          <div class="stat-box">
-            <h3>24/7</h3>
-            <p>Suporte</p>
-          </div>
+            <div class="buttons">
+                <a href="#contact" class="btn btn-primary">Solicitar Serviço</a>
+                <a href="#services" class="btn btn-secondary">Ver Serviços</a>
+            </div>
         </div>
-      </div>
 
-    </div>
-  </section>
-
-  <section id="projetos">
-    <div class="title">
-      <h2>Projectos Recentes</h2>
-      <p>
-        Alguns exemplos de sistemas e plataformas desenvolvidos pela nossa empresa.
-      </p>
-    </div>
-
-    <div class="projects">
-
-      <div class="project">
-        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop" alt="projecto">
-
-        <div class="project-info">
-          <h3>Sistema Municipal</h3>
-          <p>Gestão de cidadãos, taxas e serviços públicos.</p>
+        <div class="hero-card">
+            <h3>Inovação & Segurança</h3>
+            <p>
+                Oferecemos soluções tecnológicas avançadas para empresas,
+                escolas, instituições públicas e privadas. Nossa missão é garantir
+                estabilidade, segurança digital e crescimento tecnológico para os nossos clientes.
+            </p>
         </div>
-      </div>
 
-      <div class="project">
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" alt="projecto">
+    </section>
 
-        <div class="project-info">
-          <h3>Plataforma Empresarial</h3>
-          <p>Automatização e gestão inteligente de empresas.</p>
+    <section id="services">
+
+        <div class="section-title">
+            <h2>Nossos <span>Serviços</span></h2>
+            <p>
+                Soluções tecnológicas completas desenvolvidas para aumentar a segurança,
+                produtividade e modernização da sua empresa.
+            </p>
         </div>
-      </div>
 
-      <div class="project">
-        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="projecto">
+        <div class="services">
 
-        <div class="project-info">
-          <h3>Aplicação Mobile</h3>
-          <p>Aplicativo moderno para comunicação e serviços.</p>
+            <div class="service-box">
+                <div class="icon">🌐</div>
+                <h3>Redes de Computadores</h3>
+                <p>
+                    Instalação e configuração de redes empresariais,
+                    cabeamento estruturado, servidores, roteadores,
+                    internet corporativa e manutenção de infraestrutura.
+                </p>
+            </div>
+
+            <div class="service-box">
+                <div class="icon">🛡️</div>
+                <h3>Segurança Eletrónica</h3>
+                <p>
+                    Instalação de câmeras de vigilância, alarmes,
+                    controlo de acesso, sensores inteligentes e monitoramento 24 horas.
+                </p>
+            </div>
+
+            <div class="service-box">
+                <div class="icon">💾</div>
+                <h3>Backups & Proteção</h3>
+                <p>
+                    Sistemas avançados de backup, recuperação de dados,
+                    armazenamento em nuvem e proteção contra perda de informações.
+                </p>
+            </div>
+
+            <div class="service-box">
+                <div class="icon">💻</div>
+                <h3>Softwares Empresariais</h3>
+                <p>
+                    Desenvolvimento de sistemas personalizados para gestão de empresas,
+                    escolas, municípios, clínicas e organizações.
+                </p>
+            </div>
+
+            <div class="service-box">
+                <div class="icon">☁️</div>
+                <h3>Cloud & Servidores</h3>
+                <p>
+                    Configuração de servidores locais e cloud,
+                    hospedagem de sistemas, armazenamento online e segurança digital.
+                </p>
+            </div>
+
+            <div class="service-box">
+                <div class="icon">📱</div>
+                <h3>Websites & Aplicações</h3>
+                <p>
+                    Criação de websites modernos, lojas online,
+                    aplicativos empresariais e plataformas digitais profissionais.
+                </p>
+            </div>
+
         </div>
-      </div>
 
-    </div>
-  </section>
+    </section>
 
-  <section id="contacto">
+    <section id="about">
 
-    <div class="contact">
-      <h2>Entre em Contacto</h2>
+        <div class="about">
 
-      <p>
-        Precisa de um website, sistema ou solução tecnológica?
-        Fale connosco hoje mesmo e transforme o seu negócio.
-      </p>
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Empresa Tecnologia">
 
-      <form>
-        <input type="text" placeholder="Seu Nome">
-        <input type="email" placeholder="Seu Email">
-        <input type="text" placeholder="Assunto">
-        <textarea placeholder="Digite sua mensagem..."></textarea>
+            <div class="about-text">
+                <h2>Sobre a <span>Moyo Technologies</span></h2>
 
-        <button class="btn btn-primary">Enviar Mensagem</button>
-      </form>
+                <p>
+                    A Moyo Technologies nasceu com o objetivo de revolucionar o setor tecnológico,
+                    oferecendo soluções modernas, eficientes e seguras para empresas de todos os tamanhos.
+                </p>
 
-      <div class="socials">
-        <a href="#">F</a>
-        <a href="#">I</a>
-        <a href="#">L</a>
-        <a href="#">W</a>
-      </div>
+                <p>
+                    Trabalhamos com inovação, qualidade e compromisso, garantindo serviços tecnológicos
+                    capazes de transformar negócios e aumentar a produtividade.
+                </p>
 
-    </div>
+                <p>
+                    Nossa equipa é formada por profissionais especializados em infraestrutura,
+                    redes, segurança, programação e suporte técnico.
+                </p>
 
-  </section>
+                <div class="stats">
 
-  <footer>
-    <p>
-      Moyo Tecnologies| Uma Nova Era Digital.
-    </p>
-  </footer>
+                    <div class="stat-box">
+                        <h3>500+</h3>
+                        <p>Clientes</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <h3>24/7</h3>
+                        <p>Suporte</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <h3>100%</h3>
+                        <p>Segurança</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="projects">
+
+        <div class="section-title">
+            <h2>Projetos & <span>Soluções</span></h2>
+            <p>
+                Conheça algumas das áreas onde a Moyo Technologies atua com excelência.
+            </p>
+        </div>
+
+        <div class="projects">
+
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop">
+
+                <div class="project-overlay">
+                    <h3>Infraestrutura Empresarial</h3>
+                    <p>
+                        Instalação completa de redes corporativas e servidores modernos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop">
+
+                <div class="project-overlay">
+                    <h3>Cibersegurança</h3>
+                    <p>
+                        Proteção digital, backups e monitoramento avançado de dados.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=1200&auto=format&fit=crop">
+
+                <div class="project-overlay">
+                    <h3>Sistemas Inteligentes</h3>
+                    <p>
+                        Desenvolvimento de plataformas modernas e softwares empresariais.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <div class="section-title">
+            <h2>Por Que Escolher a <span>Moyo Technologies?</span></h2>
+        </div>
+
+        <div class="why">
+
+            <div class="why-box">
+                <h3>⚡ Rapidez</h3>
+                <p>
+                    Atendimento rápido e soluções eficientes para qualquer problema tecnológico.
+                </p>
+            </div>
+
+            <div class="why-box">
+                <h3>🔒 Segurança</h3>
+                <p>
+                    Proteção avançada para redes, sistemas, servidores e dados empresariais.
+                </p>
+            </div>
+
+            <div class="why-box">
+                <h3>🚀 Inovação</h3>
+                <p>
+                    Utilizamos tecnologias modernas e ferramentas profissionais de última geração.
+                </p>
+            </div>
+
+            <div class="why-box">
+                <h3>📞 Suporte</h3>
+                <p>
+                    Equipa especializada disponível para suporte técnico e manutenção.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="contact">
+
+        <div class="contact">
+
+            <div class="contact-info">
+                <h2>Entre em <span>Contacto</span></h2>
+
+                <p>
+                    Precisa modernizar a sua empresa?
+                    Entre em contacto com a Moyo Technologies e descubra como podemos transformar o seu negócio.
+                </p>
+
+                <p><strong>📍 Endereço:</strong> Beira, Moçambique</p>
+                <p><strong>📞 Telefone:</strong> +258 84 000 0000</p>
+                <p><strong>📧 Email:</strong> contacto@moyotechnologies.com</p>
+                <p><strong>🌐 Website:</strong> www.moyotechnologies.com</p>
+            </div>
+
+            <div class="contact-form">
+                <form>
+                    <input type="text" placeholder="Seu Nome" required>
+                    <input type="email" placeholder="Seu Email" required>
+                    <input type="text" placeholder="Assunto">
+                    <textarea placeholder="Digite sua mensagem..."></textarea>
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Moyo Technologies | Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 </html>
+```
+
+## Como usar
+
+1. Abra o Notepad.
+2. Cole todo o código.
+3. Salve como: `index.html`
+4. Clique duas vezes no ficheiro para abrir no navegador.
